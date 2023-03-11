@@ -23,7 +23,7 @@ public class RandomGames {
 	 * 随机数游戏类，猜1-100的随机数
 	 */
 	public static void randomGames() {
-		Integer randomInt = RandomUtils.getIntegerRandom(100);
+		Integer randomInt = RandomUtils.getIntegerRandom(100) + 1;
 
 		// log.debug("随机数是：{}", randomInt);
 
