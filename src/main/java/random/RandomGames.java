@@ -24,23 +24,20 @@ public class RandomGames {
 	 */
 	public static void randomGames() {
 		Integer randomInt = RandomUtils.getIntegerRandom(100) + 1;
-
-		// log.debug("随机数是：{}", randomInt);
-
+		
 		Boolean isTrue = false;
 		while (!isTrue) {
 			System.out.println("请输入随机数:");
 			Scanner sc = new Scanner(System.in);
 			int guessInt = sc.nextInt();
-			if (guessInt == randomInt) {
+			
+			if (guessInt > randomInt) {
+				log.info("猜大了！");
+			} else if (guessInt < randomInt) {
+				log.info("猜小了！");
+			} else {
 				isTrue = true;
 				sc.close();
-			} else {
-				if (guessInt > randomInt) {
-					log.info("猜大了！");
-				} else {
-					log.info("猜小了！");
-				}
 			}
 		}
 
