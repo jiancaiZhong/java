@@ -12,8 +12,7 @@ public class RandomUtilsTest extends RandomUtils {
 	 */
 	@Test
 	public void testGetIntegerRandom() {
-		RandomUtilsTest randomUtilsTest = new RandomUtilsTest();
-		Integer integerRandom = randomUtilsTest.getIntegerRandom(10);
+		Integer integerRandom = getIntegerRandom(10);
 		log.debug("integerRandom ==> {}", integerRandom);
 	}
 
